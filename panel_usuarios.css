@@ -1,0 +1,267 @@
+/* Variables CSS (copied from index.html and previous admin panels) */
+    :root {
+      --primary-color: #0056b3;
+      /* Azul oscuro para elementos principales */
+      --secondary-color: #007bff;
+      /* Azul vibrante para resaltados */
+      --accent-color: #28a745;
+      /* Verde para acciones positivas */
+      --text-color: #343a40;
+      /* Gris oscuro para texto */
+      --light-bg: #f8f9fa;
+      /* Fondo claro */
+      --dark-bg: #212529;
+      /* Fondo oscuro */
+      --gradient-start: #007bff;
+      --gradient-end: #0056b3;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--light-bg);
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      background-color: var(--primary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: white !important;
+      font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: white !important;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Main Content */
+    .user-section {
+      padding: 80px 0;
+      min-height: calc(100vh - 100px);
+    }
+
+    .section-heading {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+    }
+
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background-color: var(--secondary-color);
+      bottom: -10px;
+      left: 0;
+      border-radius: 3px;
+    }
+
+    /* Cards */
+    .user-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .user-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .user-card h5 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* Tables */
+    .table-responsive {
+      margin-top: 20px;
+    }
+
+    .table {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+
+    .table thead th {
+      background-color: var(--secondary-color);
+      color: white;
+      font-weight: 600;
+      border-bottom: none;
+      padding: 15px;
+    }
+
+    .table tbody tr:nth-child(even) {
+      background-color: var(--light-bg);
+    }
+
+    .table tbody tr:hover {
+      background-color: rgba(0, 123, 255, 0.05);
+    }
+
+    .table td,
+    .table th {
+      padding: 12px 15px;
+      vertical-align: middle;
+    }
+
+    /* Buttons */
+    .btn-primary-custom {
+      background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+      border: none;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+      background: linear-gradient(to right, var(--gradient-end), var(--gradient-start));
+    }
+
+    .btn-outline-primary-custom {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+      border-radius: 50px;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary-custom:hover {
+      background-color: var(--primary-color);
+      color: white;
+      box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2);
+    }
+
+    /* Forms */
+    .form-control,
+    .form-select {
+      border-radius: 10px;
+      border: 1px solid #ced4da;
+      padding: 10px 15px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    }
+
+    /* Modals */
+    .modal-content {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+      background-color: var(--primary-color);
+      color: white;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom: none;
+    }
+
+    .modal-header .btn-close {
+      filter: invert(1);
+    }
+
+    .modal-title {
+      font-weight: 600;
+    }
+
+    .modal-footer {
+      border-top: none;
+      background-color: var(--light-bg);
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    /* Animations */
+    .animate-fade-in {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-slide-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInUp 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--dark-bg);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 20px 0;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* Specific styles for user panel */
+    .progress-bar-custom {
+      background-color: var(--secondary-color);
+      border-radius: 5px;
+    }
+
+    .report-photo-preview {
+      max-width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: contain;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
